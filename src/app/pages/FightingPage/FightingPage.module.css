@@ -1,0 +1,28 @@
+.pageWrapper {
+    max-height: 1024px;
+    max-width: 1024px;
+    position: relative;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.info {
+    height: 64px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.actions {
+    display: flex;
+    gap: 32px;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+}

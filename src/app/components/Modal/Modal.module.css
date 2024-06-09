@@ -1,0 +1,67 @@
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.backdrop {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window {
+    padding: 20px;
+    margin: auto;
+    background: white;
+    position: relative;
+}
+
+.window::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    bottom: -8px;
+    right: -8px;
+    border: 4px solid grey;
+    border-top: none;
+    border-left: none;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.window::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    top: -8px;
+    left: -8px;
+    border: 4px solid grey;
+    border-bottom: none;
+    border-right: none;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.header {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.content {
+
+}
+
+.footer {
+    margin-top: 16px;
+}
+

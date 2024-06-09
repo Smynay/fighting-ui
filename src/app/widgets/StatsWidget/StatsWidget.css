@@ -1,0 +1,11 @@
+.StatsWidget {
+    display: flex;
+    justify-content: space-between;
+    gap: 30%;
+}
+
+.StatsWidget__block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

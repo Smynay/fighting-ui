@@ -1,0 +1,16 @@
+.root {
+    display: flex;
+}
+
+.root_fullWidth {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.control {
+}
+
+.control_selected {
+    border-color: grey;
+    border-radius: 2px;
+}

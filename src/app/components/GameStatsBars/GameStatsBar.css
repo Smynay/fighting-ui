@@ -1,0 +1,9 @@
+.GameStatsBar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.GameStatsBar__secondary {
+    display: flex;
+}
