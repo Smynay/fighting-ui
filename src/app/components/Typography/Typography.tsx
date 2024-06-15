@@ -1,5 +1,5 @@
 import styles from "./Typography.module.css";
-import { createElement, FC, PropsWithChildren } from "react";
+import { createElement, DOMAttributes, FC, PropsWithChildren } from "react";
 import classNames from "classnames/bind";
 
 type TypographyProps = {
@@ -9,7 +9,8 @@ type TypographyProps = {
   weight?: "bold" | "normal" | "light";
   spacing?: 0 | 1 | 2 | 3;
   transform?: "capitalize" | "uppercase";
-} & PropsWithChildren;
+} & PropsWithChildren &
+  DOMAttributes<HTMLParagraphElement>;
 
 const cx = classNames.bind(styles);
 
@@ -21,6 +22,7 @@ export const Typography: FC<TypographyProps> = ({
   spacing = 0,
   transform,
   children,
+  ...nativeProps
 }: TypographyProps) => {
   const className = cx(
     `size-${size}`,
@@ -34,6 +36,7 @@ export const Typography: FC<TypographyProps> = ({
     component,
     {
       className,
+      ...nativeProps,
     },
     children,
   );
