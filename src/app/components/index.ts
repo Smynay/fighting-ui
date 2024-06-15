@@ -6,3 +6,4 @@ export * from "./Modal";
 export * from "./Counter";
 export * from "./RoundCounter";
 export * from "./Typography";
+export * from "./Box";
