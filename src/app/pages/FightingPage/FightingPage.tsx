@@ -8,15 +8,18 @@ import {
   StatsWidget,
   RetryWidget,
 } from "../../widgets";
+import { RoundCounterWidget } from "../../widgets/RoundCounterWidget";
 export const FightingPage = () => (
   <ViewModelsProvider>
-    <div className={styles.pageWrapper}>
+    <div id="fightingPage" className={styles.pageWrapper}>
       <div className={styles.page}>
         <div className={styles.info}>
           <ConnectionWidget />
         </div>
         <div className={styles.content}>
-          <StatsWidget />
+          <StatsWidget>
+            <RoundCounterWidget />
+          </StatsWidget>
           <CreateActorWidget />
         </div>
         <div className={styles.actions}>

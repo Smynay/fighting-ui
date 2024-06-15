@@ -1,7 +1,14 @@
+:root {
+    --page-width: 1024px;
+    --page-height: 1024px;
+}
+
 .pageWrapper {
-    max-height: 1024px;
-    max-width: 1024px;
+    height: var(--page-height);
+    width: var(--page-width);
     position: relative;
+    top: calc(50% - var(--page-height) / 2);
+    left: calc(50% - var(--page-width) / 2);
 }
 
 .page {
