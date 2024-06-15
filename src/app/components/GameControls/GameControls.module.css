@@ -5,6 +5,7 @@
 .root_fullWidth {
     width: 100%;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .control {
@@ -13,4 +14,8 @@
 .control_selected {
     border-color: grey;
     border-radius: 2px;
+}
+
+.gap-m {
+
 }

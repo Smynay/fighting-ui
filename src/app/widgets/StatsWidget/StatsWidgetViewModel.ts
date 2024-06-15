@@ -11,7 +11,7 @@ export class StatsWidgetViewModel {
   }
 
   get isShow(): boolean {
-    return this.fightingModel.state === "run";
+    return ["run", "end"].includes(this.fightingModel.state || "");
   }
 
   private get isActionShow(): boolean {

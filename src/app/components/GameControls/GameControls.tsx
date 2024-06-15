@@ -12,6 +12,7 @@ type GameControlsProps = {
   actions: GameControlsAction[];
   fullWidth?: boolean;
 };
+
 export const GameControls: FC<GameControlsProps> = ({
   actions,
   fullWidth = false,

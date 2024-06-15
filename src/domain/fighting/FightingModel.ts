@@ -35,6 +35,22 @@ export class FightingModel {
     return this._gameState?.data?.actions;
   }
 
+  get gameResult(): string {
+    if (!this._gameState.data?.results?.winnerId) {
+      return "draw";
+    }
+
+    if (this.currentOpponent?.id === this._gameState.data?.results?.winnerId) {
+      return "looser";
+    }
+
+    if (this.currentPlayer?.id === this._gameState.data?.results?.winnerId) {
+      return "winner";
+    }
+
+    return "draw";
+  }
+
   get counters() {
     return {
       round: this._gameState.data?.results?.round || 0,

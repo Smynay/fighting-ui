@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { useGetNewIdOrPassed, useModalOpenState } from "../hooks";
 import { Modal } from "../Modal";
+import styles from "./Confirm.module.css";
 
 type ConfirmProps = {
   title?: string;
@@ -39,7 +40,7 @@ export const Confirm: FC<ConfirmProps> = ({
   const header = title ?? "Confirmation";
 
   const footer = (
-    <div>
+    <div className={styles.buttons}>
       <button onClick={handleClose}>Close</button>
       <button onClick={handleConfirm}>Confirm</button>
     </div>

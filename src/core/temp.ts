@@ -9,6 +9,7 @@ import {
 } from "../app/widgets";
 import { INIT } from "./constants";
 import { FightingModel } from "../domain";
+import { RoundCounterViewModel } from "../app/widgets/RoundCounterWidget";
 
 type LifeCycleMethods = {
   [INIT]?: CallableFunction;
@@ -53,4 +54,5 @@ export const viewModels = {
   ),
   statsWidgetViewModel: createInstance(StatsWidgetViewModel, models.fighting),
   retryWidgetViewModel: createInstance(RetryWidgetViewModel, models.fighting),
+  roundCounterViewModel: createInstance(RoundCounterViewModel, models.fighting),
 };
