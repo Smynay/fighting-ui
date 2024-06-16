@@ -1,0 +1,8 @@
+:root[data-theme="light"] {
+    --color-primary: red;
+    --color-secondary: blue;
+    --color-text-primary: black;
+    --color-text-secondary: grey;
+    --color-background-primary: white;
+    --color-background-secondary: grey;
+}

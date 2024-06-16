@@ -1,0 +1,6 @@
+:root {
+    --spacing-constant: 4px;
+    --spacing-s: var(--spacing-constant);
+    --spacing-m: calc(var(--spacing-constant) * 2);
+    --spacing-l: calc(var(--spacing-constant) * 4);
+}
