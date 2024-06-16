@@ -1,4 +1,4 @@
-@import '../theme/theme.module.css';
+@import '../theme/theme.css';
 
 .display-flex {
     display: flex;
