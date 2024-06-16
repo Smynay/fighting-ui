@@ -7,6 +7,7 @@ import {
   CreateActorWidget,
   StatsWidget,
   RetryWidget,
+  WaitingWidget,
 } from "../../widgets";
 import { RoundCounterWidget } from "../../widgets/RoundCounterWidget";
 export const FightingPage = () => (
@@ -27,6 +28,7 @@ export const FightingPage = () => (
           <div>
             <GameModeWidget />
             <ActionsWidget />
+            <WaitingWidget />
           </div>
           <div></div>
         </div>

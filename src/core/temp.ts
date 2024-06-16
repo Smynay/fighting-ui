@@ -6,6 +6,7 @@ import {
   ActionWidgetViewModel,
   CreateActorWidgetViewModel,
   StatsWidgetViewModel,
+  WaitingWidgetViewModel,
 } from "../app/widgets";
 import { INIT } from "./constants";
 import { FightingModel } from "../domain";
@@ -55,4 +56,8 @@ export const viewModels = {
   statsWidgetViewModel: createInstance(StatsWidgetViewModel, models.fighting),
   retryWidgetViewModel: createInstance(RetryWidgetViewModel, models.fighting),
   roundCounterViewModel: createInstance(RoundCounterViewModel, models.fighting),
+  waitingWidgetViewModel: createInstance(
+    WaitingWidgetViewModel,
+    models.fighting,
+  ),
 };

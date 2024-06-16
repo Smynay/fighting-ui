@@ -26,7 +26,10 @@ export class CreateActorWidgetViewModel {
   }
 
   get isShown(): boolean {
-    return this.fightingModel.currentEventType === "createActor";
+    return (
+      this.fightingModel.currentEventType === "createActor" &&
+      !this.fightingModel.isWaitForOpponent
+    );
   }
 
   get healthParams(): StatParam[] {

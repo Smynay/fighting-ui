@@ -22,6 +22,7 @@ export class FightingModel {
   private domain = "fighting";
   private _currentEventType: string | undefined = undefined;
   private _gameState: GameState = new GameState();
+  private _isWaitForOpponent = false;
 
   get currentEventType(): string | undefined {
     return this._currentEventType;
@@ -58,6 +59,10 @@ export class FightingModel {
     };
   }
 
+  get isWaitForOpponent(): boolean {
+    return this._isWaitForOpponent;
+  }
+
   private get currentPlayerId(): string | undefined {
     return this._gameState.data?.id;
   }
@@ -79,6 +84,8 @@ export class FightingModel {
   }
 
   private resolveDomainMessage(action?: FightingAction): void {
+    this._isWaitForOpponent = false;
+
     if (action) {
       this._currentEventType = this.resolveDomainEvent(action.type);
     }
@@ -110,10 +117,14 @@ export class FightingModel {
   }
 
   public chooseAction(value: string): void {
+    this._isWaitForOpponent = true;
+
     return this.connection.send(this.getDomainEventType("chooseAction"), value);
   }
 
   public createActor(health: number, stamina: number): void {
+    this._isWaitForOpponent = true;
+
     return this.connection.send(this.getDomainEventType("createActor"), {
       health,
       stamina,

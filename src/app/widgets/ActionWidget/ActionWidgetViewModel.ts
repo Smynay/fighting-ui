@@ -13,7 +13,10 @@ export class ActionWidgetViewModel {
   }
 
   get isShown(): boolean {
-    return this.fightingModel.currentEventType === "chooseAction";
+    return (
+      this.fightingModel.currentEventType === "chooseAction" &&
+      !this.fightingModel.isWaitForOpponent
+    );
   }
 
   get actions(): Action[] {
