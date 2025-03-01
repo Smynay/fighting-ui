@@ -11,6 +11,7 @@ import {
 import { INIT } from "./constants";
 import { FightingModel } from "../domain";
 import { RoundCounterViewModel } from "../app/widgets/RoundCounterWidget";
+import { getServerUrl } from "./utils";
 
 type LifeCycleMethods = {
   [INIT]?: CallableFunction;
@@ -29,7 +30,7 @@ const createInstance = <T>(Class: ConstructorType<T>, ...args: any[]): T => {
 };
 
 export const plugins = {
-  connection: createInstance(Connection, "ws://91.108.25.189:3000"),
+  connection: createInstance(Connection, getServerUrl()),
 };
 
 export const models = {
