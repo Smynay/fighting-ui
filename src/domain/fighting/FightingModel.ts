@@ -36,6 +36,10 @@ export class FightingModel {
     return this._gameState?.data?.actions;
   }
 
+  get options() {
+    return this._gameState?.data?.options;
+  }
+
   get gameResult(): string {
     if (!this._gameState.data?.results?.winnerId) {
       return "draw";
@@ -129,6 +133,10 @@ export class FightingModel {
       health,
       stamina,
     });
+  }
+
+  public chooseAi(value: string): void {
+    return this.connection.send(this.getDomainEventType("chooseAi"), value);
   }
 
   public confirmRetry(value: boolean): void {

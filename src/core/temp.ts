@@ -12,6 +12,7 @@ import { INIT } from "./constants";
 import { FightingModel } from "../domain";
 import { RoundCounterViewModel } from "../app/widgets/RoundCounterWidget";
 import { getServerUrl } from "./utils";
+import {AIWidgetViewModel} from "../app/widgets/AIWidget";
 
 type LifeCycleMethods = {
   [INIT]?: CallableFunction;
@@ -61,4 +62,7 @@ export const viewModels = {
     WaitingWidgetViewModel,
     models.fighting,
   ),
+  aiWidgetViewModel: createInstance(
+      AIWidgetViewModel, models.fighting
+  )
 };

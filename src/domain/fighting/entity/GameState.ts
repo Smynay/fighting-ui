@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 export type GameMode = Record<string, number>;
 export type Actions = string[];
+export type Options = string[];
 export type ActorInfo = {
   id: string;
   health: number;
@@ -22,6 +23,7 @@ export interface GameStateData {
   modes?: GameMode;
   actions?: Actions;
   results?: Results;
+  options?: Options
 }
 
 export class GameState {

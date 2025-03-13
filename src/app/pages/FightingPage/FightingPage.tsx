@@ -10,6 +10,7 @@ import {
   WaitingWidget,
 } from "../../widgets";
 import { RoundCounterWidget } from "../../widgets/RoundCounterWidget";
+import {AIWidget} from "../../widgets/AIWidget";
 export const FightingPage = () => (
   <ViewModelsProvider>
     <div id="fightingPage" className={styles.pageWrapper}>
@@ -26,6 +27,7 @@ export const FightingPage = () => (
         <div className={styles.actions}>
           <div></div>
           <div>
+            <AIWidget />
             <GameModeWidget />
             <ActionsWidget />
             <WaitingWidget />
